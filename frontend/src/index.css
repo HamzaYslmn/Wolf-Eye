@@ -1,0 +1,107 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+html,
+body,
+#root {
+    min-height: 100%;
+    font-language-override: "en";
+}
+
+body {
+    margin: 0;
+    background: var(--color-bg-dark);
+    color: var(--color-text);
+}
+
+@theme {
+    --color-bg-dark: #09090b;
+    --color-text: #e4e4e7;
+
+    /* ── Tactical: Page backgrounds ── */
+    --color-page-drone: #0a0a0f;
+    --color-page-vr: #030812;
+
+    /* ── Tactical: Objective (red family) ── */
+    --color-objective: #ef4444;
+    --color-objective-text: #f87171;
+    --color-objective-muted: #fca5a5;
+
+    /* ── Tactical: Drone (blue family) ── */
+    --color-drone: #3b82f6;
+    --color-drone-muted: #93c5fd;
+
+    /* ── Tactical: HUD accent (amber family) ── */
+    --color-hud: #fbbf24;
+    --color-hud-deep: #f59e0b;
+
+    /* ── Tactical: UI accent (cyan) ── */
+    --color-tactical: #22d3ee;
+
+    /* ── Tactical: Status indicators ── */
+    --color-cam-active: #4ade80;
+    --color-drone-count: #34d399;
+    --color-human: #facc15;
+}
+
+input,
+select,
+option,
+textarea,
+.overflow-y-auto {
+    color-scheme: dark;
+}
+
+/* MARK: Dark map — invert + hue-rotate keeps colors (blue lakes, green parks) */
+.dark-map .leaflet-tile-pane {
+    filter: invert(1) hue-rotate(180deg) brightness(0.85) contrast(0.9) saturate(0.8);
+}
+
+.dark-map .leaflet-control-attribution {
+    background: rgba(0, 0, 0, .6) !important;
+    color: rgba(255, 255, 255, .3) !important;
+}
+
+.dark-map .leaflet-control-attribution a {
+    color: rgba(100, 200, 255, .5) !important;
+}
+
+/* MARK: Chat markdown — minimal styling for AI message content */
+.chat-md p { margin: 0.2em 0; }
+.chat-md ul, .chat-md ol { margin: 0.2em 0; padding-left: 1.2em; }
+.chat-md code { background: rgba(255,255,255,0.08); padding: 0.1em 0.3em; border-radius: 2px; }
+.chat-md pre { background: rgba(0,0,0,0.3); padding: 0.4em; border-radius: 3px; overflow-x: auto; margin: 0.3em 0; }
+.chat-md pre code { background: none; padding: 0; }
+.chat-md strong { color: rgba(34,211,238,0.9); }
+.chat-md a { color: rgba(34,211,238,0.7); text-decoration: underline; }
+.chat-md table { width: 100%; border-collapse: collapse; margin: 0.3em 0; font-size: inherit; }
+.chat-md th, .chat-md td { border: 1px solid rgba(255,255,255,0.1); padding: 0.2em 0.4em; text-align: left; }
+.chat-md th { background: rgba(255,255,255,0.06); color: rgba(34,211,238,0.8); font-weight: 700; }
+.chat-md tr:nth-child(even) { background: rgba(255,255,255,0.03); }
+
+/* MARK: Minimap grayscale — only tiles, not markers/lines */
+.minimap-bw .leaflet-tile-pane {
+    filter: grayscale(1) brightness(0.6) contrast(1.1);
+}
+
+/* MARK: Dark Leaflet popup */
+.dark-popup .leaflet-popup-content-wrapper {
+    background: rgba(10, 10, 15, .92);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, .6);
+    color: var(--color-text);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.dark-popup .leaflet-popup-tip {
+    background: rgba(10, 10, 15, .92);
+}
+
+.dark-popup .leaflet-popup-close-button {
+    color: rgba(255, 255, 255, .3);
+}
+
+.dark-popup .leaflet-popup-close-button:hover {
+    color: rgba(255, 255, 255, .7);
+}

@@ -1,0 +1,197 @@
+{
+  "drones": {
+    "1": {
+      "drone": "drone1",
+      "current_location": [
+        39.907,
+        32.8355
+      ],
+      "altitude_m": 55,
+      "speed_kmh": 0,
+      "heading_deg": 45,
+      "status": "idle",
+      "battery": {
+        "level_pct": 87,
+        "voltage_v": 22.4,
+        "estimated_flight_min": 34
+      },
+      "objectives": [
+        {
+          "name": "obj1",
+          "coord": [
+            39.9015,
+            32.8355
+          ],
+          "tag": "enemy-1",
+          "color": "#ef4444"
+        },
+        {
+          "name": "obj2",
+          "coord": [
+            39.908,
+            32.8365
+          ],
+          "tag": "enemy-2",
+          "color": "#ef4444"
+        }
+      ]
+    },
+    "2": {
+      "drone": "drone2",
+      "current_location": [
+        39.9028,
+        32.8345
+      ],
+      "altitude_m": 42,
+      "speed_kmh": 12,
+      "heading_deg": 190,
+      "status": "patrol",
+      "battery": {
+        "level_pct": 72,
+        "voltage_v": 21.8,
+        "estimated_flight_min": 28
+      },
+      "objectives": [
+        {
+          "name": "obj4",
+          "coord": [
+            39.90425,
+            32.83395
+          ],
+          "tag": "enemy-3",
+          "color": "#ef4444"
+        },
+        {
+          "name": "obj5",
+          "coord": [
+            39.902,
+            32.833
+          ],
+          "tag": "enemy-4",
+          "color": "#ef4444"
+        }
+      ]
+    }
+  },
+  "humans": {
+    "1": {
+      "name": "player",
+      "coord": [
+        39.90153316132807,
+        32.833348433141154
+      ],
+      "objectives": [
+        {
+          "name": "obj-6",
+          "coord": [
+            39.9054,
+            32.8358
+          ],
+          "tag": "friend-1",
+          "color": "#22c55e"
+        }
+      ]
+    },
+    "2": {
+      "name": "h2",
+      "coord": [
+        39.9035,
+        32.836
+      ]
+    },
+    "3": {
+      "name": "h3",
+      "coord": [
+        39.906,
+        32.8335
+      ]
+    }
+  },
+  "comms": {
+    "1": {
+      "timestamp": "2025-01-15T08:12:00Z",
+      "from": "ALPHA-1",
+      "message": "SITREP: Bolge C guneybati, 2 supheli arac tespit. Silah tasima ihtimali yuksek.",
+      "tag": "military"
+    },
+    "2": {
+      "timestamp": "2025-01-15T08:18:00Z",
+      "from": "BRAVO-3",
+      "message": "Gozlem: 1 Teknik ve 1 sedan, guneye hareket ediyor.",
+      "tag": "military"
+    },
+    "3": {
+      "timestamp": "2025-01-15T08:22:00Z",
+      "from": "CHARLIE-2",
+      "message": "Devriye: Bolge A sakin. Sivil trafik normal.",
+      "tag": "friend"
+    },
+    "4": {
+      "timestamp": "2025-01-15T08:30:00Z",
+      "from": "ALPHA-1",
+      "message": "Guncelleme: Araclar kuzeydoguya ilerliyor. IHA ile takip gerekli.",
+      "tag": "military"
+    },
+    "5": {
+      "timestamp": "2025-01-15T08:45:00Z",
+      "from": "DELTA-5",
+      "message": "IED suphesi: Ana yol uzerinde kazilik alan. EOD ekibi talep.",
+      "tag": "enemy"
+    },
+    "6": {
+      "timestamp": "2025-01-15T09:00:00Z",
+      "from": "BRAVO-3",
+      "message": "Sivil istihbarat: Pazar yakininda silahli 3 kisi. Dogrulama bekleniyor.",
+      "tag": "civilian"
+    },
+    "7": {
+      "timestamp": "2025-01-15T09:15:00Z",
+      "from": "ECHO-7",
+      "message": "Drone-2 termal: Hedef bolgede 4-5 kisi, 1 arac tespit.",
+      "tag": "friend"
+    },
+    "8": {
+      "timestamp": "2025-01-15T09:30:00Z",
+      "from": "ALPHA-1",
+      "message": "Sonuc: Bolge C tehdit YUKSEK. Alarm durumu, hazir kuvvet bekleme pozisyonunda.",
+      "tag": "enemy"
+    }
+  },
+  "cameras": {
+    "1": {
+      "name": "drone1",
+      "category": "drone_cam",
+      "path": "drone_cam/drone1.png"
+    },
+    "2": {
+      "name": "drone2",
+      "category": "drone_cam",
+      "path": "drone_cam/drone2.jpg"
+    },
+    "3": {
+      "name": "drone3",
+      "category": "drone_cam",
+      "path": "drone_cam/drone3.png"
+    },
+    "4": {
+      "name": "security_cam1",
+      "category": "security_cam",
+      "path": "security_cam/security_cam1.png"
+    },
+    "5": {
+      "name": "security_cam2",
+      "category": "security_cam",
+      "path": "security_cam/security_cam2.jpg"
+    },
+    "6": {
+      "name": "security_cam3",
+      "category": "security_cam",
+      "path": "security_cam/security_cam3.png"
+    },
+    "7": {
+      "name": "security_cam4",
+      "category": "security_cam",
+      "path": "security_cam/security_cam4.png"
+    }
+  }
+}

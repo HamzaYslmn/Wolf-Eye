@@ -1,0 +1,33 @@
+[project]
+name = "wolf-eye-backend"
+version = "0.1.0"
+description = "Military assistant backend using YOLO and Ollama"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi-mcp>=0.4.0",
+    "fastapi[standard]>=0.128.0",
+    "httpx>=0.28.1",
+    "ollama>=0.6.1",
+    "pillow>=12.1.0",
+    "pydantic>=2.12.5",
+    "python-dotenv>=1.2.1",
+    "tinydb>=4.8.2",
+    "ultralytics>=8.4.21",
+]
+
+[tool.pyrefly]
+project-includes = ["src"]
+search-path = ["src"]
+ignore-errors-in-generated-code = true
+python-interpreter-path = ".venv/Scripts/python.exe"
+
+[tool.pyrefly.errors]
+bad-argument-type = false
+implicit-import = false
+bad-assignment = false
+bad-return = false
+missing-attribute = false
+bad-function-definition = false
+no-matching-overload = false
+unsupported-operation = false
