@@ -1,4 +1,4 @@
-"""Mountain Service - Entry point. Loads .env, mounts routers and static files."""
+"""Wolf-Eye Service - Entry point. Loads .env, mounts routers and static files."""
 from dotenv import load_dotenv
 load_dotenv("../ENV/.env")  # Load BEFORE any module imports
 
